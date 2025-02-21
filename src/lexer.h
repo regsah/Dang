@@ -11,6 +11,8 @@ typedef enum {
 
 
 int bypassSpace(char* str, int idx);
+int findOperatorEnd(char* str, int idx);
+int findTokenEnd(char* str, int idx);
 int checkToken(TokenMap* map, char* str, unsigned int start, unsigned int end);
 
 
