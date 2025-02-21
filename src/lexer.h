@@ -9,6 +9,7 @@ typedef enum {
     INTEGER = 0,
 } Token;
 
+
 int bypassSpace(char* str, int idx);
 int checkToken(TokenMap* map, char* str, unsigned int start, unsigned int end);
 
