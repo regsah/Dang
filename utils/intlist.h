@@ -19,9 +19,9 @@ typedef struct {
 } IntList;
 
 void initIntList(IntList* l, size_t size);
-void pushIntList(IntList* l, int element);
-int popIntList(IntList* l);
-void destroyIntList(IntList* l);
-void printIntList(IntList* l);
+void intListPush(IntList* l, int element);
+int intListPop(IntList* l);
+void intListDestroy(IntList* l);
+void intListPrint(IntList* l);
 
 #endif

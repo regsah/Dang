@@ -15,7 +15,7 @@ void initIntList(IntList* l, size_t size) {
     l->list_errno = 0;
 }
 
-void pushIntList(IntList* l, int element) {
+void intListPush(IntList* l, int element) {
     if(l == NULL) {
         printf("[LOG][List] PUSHED TO NULL POINTER\n");
         return;
@@ -38,7 +38,7 @@ void pushIntList(IntList* l, int element) {
     return;
 }
 
-int popIntList(IntList* l) {
+int intListPop(IntList* l) {
     if(l == NULL || l->list == NULL || l->used == 0) {
         printf("[LOG][List] STACK UNDERFOW\n");
         l->list_errno = LIST_ERR_UNDERFLOW;
@@ -61,7 +61,7 @@ int popIntList(IntList* l) {
     return temp;
 }
 
-void destroyIntList(IntList* l) {
+void intListDestroy(IntList* l) {
     if (l != NULL && l->list != NULL) {
         free(l->list);
         l->list = NULL;
@@ -70,11 +70,11 @@ void destroyIntList(IntList* l) {
     }
 }
 
-void printIntList(IntList* l) {
+void intListPrint(IntList* l) {
     printf("[ ");
     for(int idx=0; idx < l->used; ++idx) {
         printf("%i", l->list[idx]);
-        if(idx != l->size - 1) printf(", ");
+        if(idx != l->used - 1) printf(", ");
     }
     printf(" ]\n");
 }
